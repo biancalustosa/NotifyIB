@@ -1,0 +1,37 @@
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(5, minmax(100px, auto));
+    grid-template-areas: 
+        "header header header"
+        "main main main"
+        "article article article"
+        "section section section"
+        "footer footer footer";
+}
+
+header{
+    background-color: bisque;
+    grid-area: header;
+}
+
+main{
+    background-color: darkblue;
+    grid-area: main;
+}
+
+article{
+    background-color: black;
+    grid-area: article;
+}
+
+section{
+    background-color: yellowgreen;
+
+    grid-area: section;
+}
+
+footer{
+    background-color: purple;
+    grid-area: footer;
+}
