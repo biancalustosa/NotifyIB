@@ -11,14 +11,25 @@
 }
 
 header{
-    background-color: bisque;
+    display: flex;
+    background-color: green;
+    background-image: url(C:/Users/nicol/Desktop/notifyIB/img/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     grid-area: header;
+    padding: 0 10%;
+    height: 70vh;
+}
+
+.hand{
+    background-position: right;
 }
 
 main{
     background-color: darkblue;
     grid-area: main;
 }
+
 
 article{
     background-color: black;
@@ -27,11 +38,69 @@ article{
 
 section{
     background-color: yellowgreen;
-
+    height: 350px;;
     grid-area: section;
 }
 
+
+
 footer{
-    background-color: purple;
+    background-color:lightgray;
+    font-family: sans-serif;
     grid-area: footer;
 }
+
+footer nav{
+    text-align: center;
+}
+
+footer nav a{
+    text-decoration: none;
+}
+
+/*Codificação*/
+
+.box-header{
+    background-color: lightgreen;
+    width: 50%;
+    height: 100%;
+
+}
+
+#box-header1{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pacifico', cursive;
+    justify-content: center;
+    
+}
+#box-header1 h1{
+    background-color: blue;
+}
+
+#box-header1 p{
+    background-color: pink;
+}
+
+#box-header1 .system-icons div{
+    background-color: rgba(0,0,0,.5);
+    padding: 20px;
+}
+
+#box-header1 div img {
+    
+} 
+
+.system-icons{
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+    width: 300px;
+    border-r
+}
+
+#box-header2{
+    background: red;
+    
+}
+
