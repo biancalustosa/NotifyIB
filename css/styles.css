@@ -18,45 +18,28 @@ h1,h2,h3,h4,h5,h6,p{
     grid-template-areas: 
         "header header header"
         "main main main"
-        "section section section"
+        "notified notified notified"
         "get-in-touch get-in-touch get-in-touch"
         "footer footer footer";
 }
-
-header{
-    display: flex;
-    background-color: green;
-    background-image: url(C:/Users/nicol/Desktop/notifyIB/img/banner.png);
-    background-repeat: no-repeat;
+.header{
+    background-image: url('../img/banner.png');
     background-size: cover;
+    background-position: 50% 100%;
+    border-top: 10px solid rgba(45, 204, 112);
     grid-area: header;
-    padding: 0 10%;
-    height: 70vh;
+    height: 60vh;
 }
-
-.hand{
-    background-position: right;
-}
-
-main{
-    display: flex;
-    background-color: darkblue;
-    justify-content: space-around;
+.main{
     grid-area: main;
-    padding: 3% 0 0 0;
+    height: auto;
+    padding: 4% 13%;
 }
-
-article{
-    background-color: black;
-    grid-area: article;
+.get-notified{
+    grid-area: notified;
+    background: rgba(227, 227, 227);
+    padding: 4% 13%;
 }
-
-section{
-    background-color: yellowgreen;
-    height: 350px;;
-    grid-area: section;
-}
-
 .get-in-touch{
     grid-area: get-in-touch;
     padding: 4% 13%;
@@ -66,40 +49,17 @@ footer{
     grid-area: footer;
     padding: 4% 13%;
 }
-
-
-
-
-
-
-
-
+/***********************************/
 /*Codificação*/
-
-.box-header{
-    
-    width: 50%;
-    height: 100%;
-
-}
-
-/* .box-header p{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 15pt;
-    margin: 0;
-}*/
-
-.pointer-green{
-    margin-left: 3px;
-    color: rgba(45, 204, 112);
-}
-header{
+.header{
     padding: 0 20%;
+    display: flex;
+    justify-content: space-evenly; 
 }
-#box-header1 h1{
-    color:white;
+.header h1{
+    color: #fff;
     font-family: 'Pacifico', cursive;
-    text-align: left;
+    margin: 0;
     font-size: 60px;
     font-weight: 100;
 }
@@ -111,6 +71,10 @@ header{
     display: flex;
     flex-direction: column;
     width: 48%;
+}
+.box-header span.pointer-green{
+    margin-left: 3px;
+    color:rgba(45, 204, 112);
 }
 #box-header1 p{
     color: white;
@@ -162,71 +126,90 @@ header{
 }
 /**************************************/
 /**************** MAIN ****************/
-#main-icones{
-    display: flex; 
-    justify-content: space-around;
-   
+.main{
+    display: flex;
+    justify-content: space-between;
 }
-
-.main-text{
+.box-services{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+}
+.box-services h2{
+    color: #313131;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.box-services p{
+    color: #686666;
+    line-height: 25px;
     text-align: center;
+    width: 100%;
 }
-
-.configurações{
-    margin: 50px;
+.services-icons{
+    align-items: center;
+    background: rgba(45, 204, 112);
+    border-radius: 60px;
+    display: flex;
+    padding: 15px;
 }
-
-.favoritos{
-    margin: 50px;
-}
-
-.alcance{
-    margin: 50px;
-}
-
-.edit{
-    background-color: green;
-    border-radius:50%;
-    height: 50px;
-    padding:15px 15px;
+.services-icons img{
     width: 50px;
 }
-
-.edit img{
-    margin:0;
-    height: 50px;
-    width: 50px;
+/**************************************/
+/**************** GET NOTIFIED ****************/
+.get-notified{
+    grid-area: notified;
+    display: flex;
+    justify-content: space-around;
 }
-
-.flat{
-    background-color: green;
-    border-radius:50%;
-    height: 50px;
-    padding:15px 15px;
-    width: 50px;
+.box-notified{
+    width: 40%;
 }
-
-.flat img{
-    margin:0;
-    height: 50px;
-    width: 50px;
+/* 1º box-nofied */
+#box-notified1 h2{
+    margin-bottom: 20px;
 }
-
-.reach{
-    background-color: green;
-    border-radius:50%;
-    height: 50px;
-    padding:15px 15px;
-    width: 50px;
+#box-notified1 p{
+    color: #686666;
+    line-height: 25px;
+    margin-bottom: 25px;
 }
-
-.reach img{
-    margin:0;
-    height: 50px;
-    width: 50px;
+#box-notified1 form{
+    display: flex;
+    width: 420px;
+    height: 60px;
 }
-
-
+#box-notified1 form input{
+    border: solid 1px #a5a5a5;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    color: #313131;
+    font-size: 17px;
+    padding: 15px;
+    width: 72%;
+} 
+#box-notified1 form input::placeholder{
+    color: #a5a5a5;
+    font-size: 15px;
+}
+#box-notified1 form button{
+    background-color: rgba(45, 204, 112);
+    border: solid 1px transparent;
+    border-radius: 0 10px 10px 0;   
+    color: #fff;
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: .4px;
+    width: 28%;
+}
+/* 2º box-nofied */
+#box-notified2 video{
+    border-radius: 10px;
+    width: 100%;
+}
 
 /**************************************/
 /**************** GET IN TOUCH ****************/
@@ -306,4 +289,207 @@ footer li a{
     color: #717171;
     font-size: 20px;
     text-decoration: none;
+}
+
+
+/**************************************/
+/**************** MEDIA QUERY ****************/
+
+@media (max-width: 1500px){
+    #box-header1{
+        align-items: center;
+        width: 50%;
+    }
+    #box-header1 h1{
+        font-size: 100px;
+    }
+    #box-header1 p{
+        text-align: center;
+    }
+    #box-header2{
+        width: 50%;
+    }
+    #box-notified1 form{
+        display: flex;
+        width: 375px;
+        height: 50px;   
+    }
+}
+@media (max-width: 1300px){
+    #box-notified1{
+        width: 100%;
+    }
+    #box-header1 h1{
+        font-size: 120px;
+        text-shadow: 2px 2px 2px #000;
+    }
+    #box-header1 p{
+        font-size: 30px;
+        line-height: 40px; 
+        width: 600px;
+        text-shadow: 2px 2px 2px #000;
+    }
+    #box-header2{
+        display: none;
+    }
+    .box-system {
+        width: 270px; 
+    }
+    .systems-icons{
+        background:rgba(0, 0, 0, .7);
+        border-radius: 50px;
+        height: 60px;
+        width: 60px;
+        box-shadow: 2px 2px 10px rgb(45, 204, 112); 
+    }
+    .systems-icons:hover{
+        background:rgba(45, 204, 112);
+        cursor: pointer;
+    }
+    .systems-icons img{
+        width: 30px;
+    }
+    .get-notified{
+        align-items: center;
+        flex-direction: column;
+    }
+    .get-notified #box-notified1{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+    }
+    .get-notified #box-notified1 p{
+        text-align: center;
+    }
+    .get-notified #box-notified1 form{
+        width: 400px;
+        height: 50px;
+    }
+    #box-notified2{
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+    }
+    #box-notified2 video{
+        width: 100%;
+    }
+    footer ul{
+        width: 70%;
+    }
+    footer ul li a{
+        font-size: 20px;
+    }
+}
+@media (max-width: 1200px){
+    header{
+        border-color: #000;
+        padding: 0;
+        width: 100%;
+    }
+    .box-header{
+        padding: 0;
+    }
+    #box-header1 h1{
+        font-size: 60px;   
+    }
+    #box-header1 p{
+        font-size: 18px;
+        line-height: 25px;
+        width: 100%;
+    }
+    .box-system{
+        width: 200px;
+    }
+    .systems-icons{
+        background:rgba(0, 0, 0, .9);
+        box-shadow: 1px 1px 1px #fff; 
+        width: 50px;
+        height: 50px
+    }
+    .systems-icons:hover{
+        background:#ed145b;
+        cursor: pointer;
+    }
+    .box-header span.pointer-green{
+        color: #ed145b;
+    }
+    /* MAIN - services */
+    .main{
+        background: #151819;
+        flex-direction: column;
+    }
+    .box-services{
+        width: auto;
+        margin-top: 20px;
+    }
+    .services-icons{
+        background: #ed145b;
+    }
+    .main h2{
+        color: #fff;
+    }
+    .main p{
+        color: #fff;
+        font-size: 18px;
+    }
+    /* Get Notified */
+    .get-notified{
+        background: #9b9999;
+        padding: 15px;
+    }
+    .get-notified #box-notified1 form{
+        width: 100%;
+    }
+    .get-notified #box-notified1 button{
+        background: #151819;
+    }
+    #box-notified1{
+        width: 70%;
+        border: solid 2px #fff;
+        border-radius: 10px 10px 0 0;
+    }
+    #box-notified1 h2{
+        text-align: center;
+        color: #fff;
+    }
+    #box-notified1 p{
+        color: #fff;
+    }
+    #box-notified2{
+        padding: 0;
+    }
+    #box-notified2 video{
+        width: 70%;
+        height: 200px;
+        margin-top: 10px;
+    }
+    /* Get-in-touch */
+    .get-in-touch{
+        background: #151819;
+        color: #fff;
+    }
+    .get-in-touch i, .get-in-touch span, .get-in-touch p{
+        color: #fff
+    }
+    .get-in-touch .box-photos{
+        margin-top: 20px;
+        width: 300px;
+    }
+    .contact-icons div{
+        background: #ed145b;
+    }
+    .contact-icons div:hover{
+        background: #000;
+    }
+    /* footer */
+    footer ul{
+        width: 100%;
+    }
+    footer ul li a{
+        font-size: 18px;
+        text-align: center;
+    }
 }
