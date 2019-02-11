@@ -13,6 +13,8 @@ h1,h2,h3,h4,h5,h6,p{
 }
 .grid{
     display: grid;
+    /* grid-template-columns: 1fr 2fr 1fr 2fr 2fr); 
+                              1/5 2/5 1/5 2/5 2/5 será o tamanhda largura/coluna que cada um vai ocupar*/
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(5, minmax(100px, auto));
     grid-template-areas: 
@@ -146,6 +148,9 @@ footer{
     line-height: 25px;
     text-align: center;
     width: 100%;
+    /* ou outra solução para quebrar linha
+    • width: 40%
+    • word-wrap: normal*/
 }
 .services-icons{
     align-items: center;
@@ -236,7 +241,8 @@ footer{
 
 .get-in-touch .box-photos{
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap
+    /* flex-direction: table-row; */
     margin-top: 20px; 
 }
 .get-in-touch .photos-people{
@@ -244,6 +250,13 @@ footer{
     margin-right: 5px;
     width: 48px;
     transition: .5s;
+}
+.photos-people div{
+    height: 100%;
+    width: 100%;
+    background: red;
+    opacity: .2;
+    z-index: -3;
 }
 .get-in-touch .photos-people:hover{
     cursor: pointer;
@@ -296,6 +309,9 @@ footer li a{
 /**************** MEDIA QUERY ****************/
 
 @media (max-width: 1500px){
+    .header{
+        border-top: 10px solid rgba(0, 0, 0);
+    }
     #box-header1{
         align-items: center;
         width: 50%;
@@ -385,7 +401,7 @@ footer li a{
 }
 @media (max-width: 1200px){
     header{
-        border-color: #000;
+        border-top: #000;
         padding: 0;
         width: 100%;
     }
