@@ -1,3 +1,16 @@
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+html{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: sans-serif;
+}
+h1,h2,h3,h4,h5,h6,p{
+    margin: 0;
+}
 .grid{
     display: grid;
     grid-template-columns: repeat(3, auto);
@@ -5,8 +18,8 @@
     grid-template-areas: 
         "header header header"
         "main main main"
-        "article article article"
         "section section section"
+        "get-in-touch get-in-touch get-in-touch"
         "footer footer footer";
 }
 
@@ -33,7 +46,6 @@ main{
     padding: 3% 0 0 0;
 }
 
-
 article{
     background-color: black;
     grid-area: article;
@@ -45,26 +57,27 @@ section{
     grid-area: section;
 }
 
-
-
+.get-in-touch{
+    grid-area: get-in-touch;
+    padding: 4% 13%;
+}
 footer{
-    background-color:lightgray;
-    font-family: sans-serif;
+    background: rgb(227, 227, 227);
     grid-area: footer;
+    padding: 4% 13%;
 }
 
-footer nav{
-    text-align: center;
-}
 
-footer nav a{
-    text-decoration: none;
-}
+
+
+
+
+
 
 /*Codificação*/
 
 .box-header{
-    /* background-color: lightgreen; */
+    
     width: 50%;
     height: 100%;
 
@@ -76,71 +89,79 @@ footer nav a{
     margin: 0;
 }*/
 
-span{
-    color: green;
+.pointer-green{
+    margin-left: 3px;
+    color: rgba(45, 204, 112);
 }
-
-#box-header1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    
+header{
+    padding: 0 20%;
 }
 #box-header1 h1{
-    /* background-color: blue; */
     color:white;
     font-family: 'Pacifico', cursive;
-    font-size: 30pt;
     text-align: left;
+    font-size: 60px;
+    font-weight: 100;
 }
-
+#box-header1{
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.box-header{
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+}
 #box-header1 p{
-    /* background-color: pink; */
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 12pt;
-    margin: 3px;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 20px 0 15px;
+    width: 100%;
 }
-
-
-
-#box-header1 .system-icons div{
-    background-color: rgba(0,0,0,.5);
-    padding: 15px;
-}
-
-#box-header1 div .icone-ios{
-    border-radius: 50%;
-    cursor: pointer;
-} 
-
-#box-header1 div .icone-android{
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-#box-header1 div .icone-windows{
-    border-radius: 50%;
-    cursor: pointer;
-}
-.system-icons{
-    /* background-color: purple; */
+/* header - box-system */
+.box-system{
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 0 0; 
-    width: 200px;
-
+    width: 170px;
+}
+/* header - box system 1 */
+#box-header1 .systems-icons{
+    align-items: center;
+    background: rgba(0,0,0,.4);
+    border-radius: 30px;
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    transition: 0.5s;
+    width: 50px;
+} 
+#box-header1 .systems-icons:hover{
+    background:rgba(45, 204, 112);
+    cursor: pointer;
+}
+#box-header1 .systems-icons img{
+    width: 22px;
 }
 
+/* header - box-system 2 */
 #box-header2{
     /* background: red; */
-   
+   padding: 20px 60px 0;
 }
 
 #box-header2 .img-hand{
-    padding: 160px 150px 150px 0; 
+    /* padding: 160px 150px 150px 0;  */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: block;
+    height: 100%;
+    width: 100%;
 }
-
+/**************************************/
+/**************** MAIN ****************/
 #main-icones{
     display: flex; 
     justify-content: space-around;
@@ -203,4 +224,86 @@ span{
     margin:0;
     height: 50px;
     width: 50px;
+}
+
+
+
+/**************************************/
+/**************** GET IN TOUCH ****************/
+.get-in-touch{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.get-in-touch p{
+    color: #686666;
+    margin: 20px 0;
+}
+.get-in-touch  .style-text{
+    color: #686666;
+    line-height: 25px;
+    margin-top: 0;
+    text-align: center;
+    width: 80%;
+}
+.get-in-touch span{
+    color: #313131;
+    font-weight: bold;
+}
+
+.get-in-touch .box-photos{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px; 
+}
+.get-in-touch .photos-people{
+    height: auto;
+    margin-right: 5px;
+    width: 48px;
+    transition: .5s;
+}
+.get-in-touch .photos-people:hover{
+    cursor: pointer;
+}
+.get-in-touch h3{
+    margin-top: 30px;
+}
+/* Contact icons */
+.contact-icons{
+    display: flex;
+    justify-content: space-around; 
+    width: 295px;
+    /* background: rgb(206, 206, 206); */
+}
+.contact-icons div{
+    background: rgb(200, 200, 200);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    padding: 8.5px;
+    transition: 0.5s;
+}
+.contact-icons div:hover{
+    background: rgba(45, 204, 112);
+}
+.contact-icons img{
+    width: 20px;
+}
+/**************************************/
+/**************** FOOTER ****************/
+footer ul{
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+}
+footer li{
+    list-style: none;
+}
+footer li a{
+    color: #717171;
+    font-size: 20px;
+    text-decoration: none;
 }
