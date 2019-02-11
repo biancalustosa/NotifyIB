@@ -26,8 +26,11 @@ header{
 }
 
 main{
+    display: flex;
     background-color: darkblue;
+    justify-content: space-around;
     grid-area: main;
+    padding: 3% 0 0 0;
 }
 
 
@@ -61,46 +64,143 @@ footer nav a{
 /*Codificação*/
 
 .box-header{
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     width: 50%;
     height: 100%;
 
 }
 
+/* .box-header p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    margin: 0;
+}*/
+
+span{
+    color: green;
+}
+
 #box-header1{
     display: flex;
     flex-direction: column;
-    font-family: 'Pacifico', cursive;
     justify-content: center;
     
 }
 #box-header1 h1{
-    background-color: blue;
+    /* background-color: blue; */
+    color:white;
+    font-family: 'Pacifico', cursive;
+    font-size: 30pt;
+    text-align: left;
 }
 
 #box-header1 p{
-    background-color: pink;
+    /* background-color: pink; */
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    margin: 3px;
 }
+
+
 
 #box-header1 .system-icons div{
     background-color: rgba(0,0,0,.5);
-    padding: 20px;
+    padding: 15px;
 }
 
-#box-header1 div img {
-    
+#box-header1 div .icone-ios{
+    border-radius: 50%;
+    cursor: pointer;
 } 
 
+#box-header1 div .icone-android{
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#box-header1 div .icone-windows{
+    border-radius: 50%;
+    cursor: pointer;
+}
 .system-icons{
-    background-color: purple;
+    /* background-color: purple; */
     display: flex;
     justify-content: space-between;
-    width: 300px;
-    border-r
+    padding: 20px 0 0 0; 
+    width: 200px;
+
 }
 
 #box-header2{
-    background: red;
-    
+    /* background: red; */
+   
 }
 
+#box-header2 .img-hand{
+    padding: 160px 150px 150px 0; 
+}
+
+#main-icones{
+    display: flex; 
+    justify-content: space-around;
+   
+}
+
+.main-text{
+    text-align: center;
+}
+
+.configurações{
+    margin: 50px;
+}
+
+.favoritos{
+    margin: 50px;
+}
+
+.alcance{
+    margin: 50px;
+}
+
+.edit{
+    background-color: green;
+    border-radius:50%;
+    height: 50px;
+    padding:15px 15px;
+    width: 50px;
+}
+
+.edit img{
+    margin:0;
+    height: 50px;
+    width: 50px;
+}
+
+.flat{
+    background-color: green;
+    border-radius:50%;
+    height: 50px;
+    padding:15px 15px;
+    width: 50px;
+}
+
+.flat img{
+    margin:0;
+    height: 50px;
+    width: 50px;
+}
+
+.reach{
+    background-color: green;
+    border-radius:50%;
+    height: 50px;
+    padding:15px 15px;
+    width: 50px;
+}
+
+.reach img{
+    margin:0;
+    height: 50px;
+    width: 50px;
+}
