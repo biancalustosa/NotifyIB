@@ -509,3 +509,14 @@ footer li a{
         text-align: center;
     }
 }
+
+.get-in-touch .photos-people { 
+    background-color: red;
+    /* background-image: url(../img/pessoa1.jpg);  */
+    background-size: cover; 
+    background-position: center; 
+}
+
+.overlay{ 
+    width: 50px;
+}
