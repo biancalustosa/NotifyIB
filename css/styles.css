@@ -11,49 +11,14 @@ body{
 h1,h2,h3,h4,h5,h6,p{
     margin: 0;
 }
-.grid{
-    display: grid;
-    /* grid-template-columns: 1fr 2fr 1fr 2fr 2fr); 
-                              1/5 2/5 1/5 2/5 2/5 será o tamanhda largura/coluna que cada um vai ocupar*/
-    grid-template-columns: repeat(3, auto);
-    grid-template-rows: repeat(5, minmax(100px, auto));
-    grid-template-areas: 
-        "header header header"
-        "main main main"
-        "notified notified notified"
-        "get-in-touch get-in-touch get-in-touch"
-        "footer footer footer";
-}
+
+/*Codificação*/
 .header{
     background-image: url('../img/banner.png');
     background-size: cover;
     background-position: 50% 100%;
     border-top: 10px solid rgba(45, 204, 112);
-    grid-area: header;
     height: 60vh;
-}
-.main{
-    grid-area: main;
-    height: auto;
-    padding: 4% 13%;
-}
-.get-notified{
-    grid-area: notified;
-    background: rgba(227, 227, 227);
-    padding: 4% 13%;
-}
-.get-in-touch{
-    grid-area: get-in-touch;
-    padding: 4% 13%;
-}
-footer{
-    background: rgb(227, 227, 227);
-    grid-area: footer;
-    padding: 4% 13%;
-}
-/***********************************/
-/*Codificação*/
-.header{
     padding: 0 20%;
     display: flex;
     justify-content: space-evenly; 
@@ -129,8 +94,10 @@ footer{
 /**************************************/
 /**************** MAIN ****************/
 .main{
+    height: auto;
     display: flex;
     justify-content: space-between;
+    padding: 4% 13%;
 }
 .box-services{
     align-items: center;
@@ -165,7 +132,8 @@ footer{
 /**************************************/
 /**************** GET NOTIFIED ****************/
 .get-notified{
-    grid-area: notified;
+    background: rgba(227, 227, 227);
+    padding: 4% 13%;
     display: flex;
     justify-content: space-around;
 }
@@ -215,13 +183,13 @@ footer{
     border-radius: 10px;
     width: 100%;
 }
-
 /**************************************/
 /**************** GET IN TOUCH ****************/
 .get-in-touch{
     align-items: center;
     display: flex;
     flex-direction: column;
+    padding: 4% 13%;
 }
 .get-in-touch p{
     color: #686666;
@@ -240,9 +208,10 @@ footer{
 }
 
 .get-in-touch .box-photos{
+    align-items: center;
     display: flex;
-    flex-wrap: wrap
-    /* flex-direction: table-row; */
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 20px; 
 }
 .get-in-touch .photos-people{
@@ -254,7 +223,6 @@ footer{
 .photos-people div{
     height: 100%;
     width: 100%;
-    background: red;
     opacity: .2;
     z-index: -3;
 }
@@ -288,6 +256,10 @@ footer{
 }
 /**************************************/
 /**************** FOOTER ****************/
+footer{
+    background: rgb(227, 227, 227);
+    padding: 4% 13%;
+}
 footer ul{
     display: flex;
     flex-wrap: wrap; 
@@ -303,8 +275,6 @@ footer li a{
     font-size: 20px;
     text-decoration: none;
 }
-
-
 /**************************************/
 /**************** MEDIA QUERY ****************/
 
@@ -508,15 +478,4 @@ footer li a{
         font-size: 18px;
         text-align: center;
     }
-}
-
-.get-in-touch .photos-people { 
-    background-color: red;
-    /* background-image: url(../img/pessoa1.jpg);  */
-    background-size: cover; 
-    background-position: center; 
-}
-
-.overlay{ 
-    width: 50px;
 }
